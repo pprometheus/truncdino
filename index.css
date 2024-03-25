@@ -216,8 +216,11 @@ border: 1px white;
   color: #ffffff; 
   transform: translateY(-2px);
 }
-.clear-btn:active, .submit-btn:active {
+.clear-btn:active{
   transform: translateY(10px); /* Move button down when clicked */
+}
+.submit-btn:active{
+  transform: translateY(10px);
 }
 
 .clear-btn {
@@ -234,11 +237,6 @@ border: 1px white;
 {
   color:#747474;
   font-size: small;
-}
-
-
-form{
-  padding-left: 38%;
 }
 
 select.URL-input {
@@ -258,15 +256,25 @@ select.URL-input::-ms-expand {
 
 /* Styling the options */
 select.URL-input option {
-  background-image: url('image1.jpg');
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
   padding-left: 25px;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }
 
-/* Styling for selected option */
-select.URL-input option:checked {
-  background-color: #32a8a2; /* Example color */
-  color: white; /* Example color */
+/* Add specific background images for options */
+select.URL-input option[value="option1"] {
+  background-image: url('./assets/images/facebook-logo.png');
+}
+
+select.URL-input option[value="option2"] {
+  background-image: url('./assets/images/instagram-logo.png');
+}
+
+select.URL-input option[value="option3"] {
+  background-image: url('./assets/images/twitter-logo.png');
+}
+
+
+form{
+  padding-left: 38%;
 }
