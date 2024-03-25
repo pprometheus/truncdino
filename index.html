@@ -6,30 +6,64 @@
     <title>truncdino</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 </head>
 <body>
-
     <section id="banner">
         <img src="assets/images/logo.png" class="logo">
         <div class="banner-text">
-           <h1>truncdino</h1>
-           <p> Let's turn all your invalid URLs to valid</p>
-           <form>
-            
-            <div class="url">
-                <p>HEHE</p>
-                <input placeholder="Enter URL" class="URL-input" name="url" type="text">
-                <br>
-                <div class="submit-btn">SUBMIT</div>
+            <h1>truncdino</h1>
+            <p>Let's turn all your invalid URLs to valid</p>
+            <form>
+                <div class="url">
+                    <p>HEHE</p>
+                    <select id="imageSelect" class="URL-input" name="url">
+                        <option value="option1" data-image="image1.jpg">Option 1</option>
+                        <option value="option2" data-image="image2.jpg">Option 2</option>
+                        <option value="option3" data-image="image3.jpg">Option 3</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                    <input id="urlInput" placeholder="Enter URL" class="URL-input" name="url" type="text">
+                    <p id="requiredMessage" style="display: none;">URL Is Required</p>
+                    <button onclick="copyText()" class="copy-btn" style="display: none;">Copy</button>
+                    <div class="submit-btn">SUBMIT</div>
+                    <div class="clear-btn" onclick="clearInput()">CLEAR</div>
                 </div>
-    
-          </form>
+            </form>
+            
         </div>
- 
-       </section>
-   
-       
+    </section>
 
+    <script>
+        function copyText() {
+            var input = document.getElementById("urlInput");
+            input.select();
+            document.execCommand("copy");
+            var copyBtn = document.querySelector('.copy-btn');
+            copyBtn.innerText = "Copied";
+            setTimeout(() => {
+                copyBtn.innerText = "Copy";
+            }, 2000);
+        }
+
+        function clearInput() {
+            var input = document.getElementById("urlInput");
+            input.value = '';
+            document.getElementById("requiredMessage").style.display = "none";
+            var copyBtn = document.querySelector('.copy-btn');
+            copyBtn.style.display = "none";
+        }
+
+        document.querySelector('.submit-btn').addEventListener('click', function() {
+            var input = document.getElementById("urlInput").value;
+            var copyBtn = document.querySelector('.copy-btn');
+            if (input.trim() === '') {
+                document.getElementById("requiredMessage").style.display = "block";
+                copyBtn.style.display = "none";
+            } else {
+                document.getElementById("requiredMessage").style.display = "none";
+                copyBtn.style.display = "inline-block";
+            }
+        });
+    </script>
 </body>
 </html>
