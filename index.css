@@ -1,103 +1,103 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
 #banner{
-    /* background-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)) , url(assets/images/bg.jpg); */
-    background-color: black;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+  /* background-image:linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)) , url(assets/images/bg.jpg); */
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .logo{
-    width: 140px;
-    position: absolute;
-    top: 4%;
-    left: 6%;
-    
+  width: 140px;
+  position: absolute;
+  top: 4%;
+  left: 6%;
+  
 }
 
 .banner-text{
-    text-align: center;
-    color: white;
-    padding-top: 180px;
+  text-align: center;
+  color: white;
+  padding-top: 180px;
 }
 
 .banner-text h1{
-    text-align: center; 
-    color: white;
-    padding-top: 1px;
-    font-size: 120px;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #32a8a2; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
-  animation: typing 4s steps(40, end),blink-caret .75s step-end infinite;
-   
+  text-align: center; 
+  color: white;
+  padding-top: 1px;
+  font-size: 120px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid #32a8a2; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .10em; /* Adjust as needed */
+animation: typing 4s steps(40, end),blink-caret .75s step-end infinite;
+ 
 }
 
 /* ,,, */
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+from { width: 0 }
+to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  100% { border-color: #32a8a2; }
+from, to { border-color: transparent }
+100% { border-color: #32a8a2; }
 }
 
 .banner-text p{
-    text-align: center;
-    color: white;
-    padding-top: 1px;
-    font-size: 20px;
-    padding-left:50px;
-    padding-right: 50px;
+  text-align: center;
+  color: white;
+  padding-top: 1px;
+  font-size: 20px;
+  padding-left:50px;
+  padding-right: 50px;
 }
 
 .banner-btn{
-    margin: 70px auto 0;
+  margin: 70px auto 0;
 
 }
 
 .banner-btn a{
-    width: 150px;
-    text-decoration:none;
-    display: inline-block;
-    margin:0 10px;
-    padding: 12px 0;
-    color:white;
-    border: .5px solid white;
-    position:relative;
-    z-index: 1;
-    transition: color 0.5s;
+  width: 150px;
+  text-decoration:none;
+  display: inline-block;
+  margin:0 10px;
+  padding: 12px 0;
+  color:white;
+  border: .5px solid white;
+  position:relative;
+  z-index: 1;
+  transition: color 0.5s;
 }
 
 .banner-btn a span{
-    width:50%;
-    height:100%;
-    top:0;
-    left:0;
-    background: white;
-    z-index: index -1;
-    transition: 0.5s;
-    position:absolute;
+  width:50%;
+  height:100%;
+  top:0;
+  left:0;
+  background: white;
+  z-index: index -1;
+  transition: 0.5s;
+  position:absolute;
 }
 
 .banner-btn a:hover span{
-     width:100%;
+   width:100%;
 }
 
 .banner-btn a:hover{
-    color:black
+  color:black
 }
 
 form .in {
@@ -114,84 +114,58 @@ border: 1px white;
 }
 
 .url {
-    position: relative;
-    height: 250px;
-    width: 400px;
-    padding: 20px;
-    background-color: #FFF;
-    border-radius: 4px;
-    color: #333;
-    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
-  }
-  
-  .url:after {
-    position: absolute;
-    content: "";
-    right: -10px;
-    bottom: 18px;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 10px solid transparent;
-    /* border-bottom: 10px solid #1a044e; */
-  }
-  
-  .url p {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    line-height: 28px;
-    color: black;
-  }
-  
-  .url input {
-    position: relative;
-    bottom: 30px;
-    margin-top:  20px;
-    margin-bottom: 20px;
-    border: none;
-    top: 0.5px;
-    border-bottom: 1px solid #d4d4d4;
-    padding: 10px;
-    width: 82%;
-    background: transparent;
-    transition: all .25s ease;
-  }
-  
-  .url input:focus {
-    outline: none;
-    border-bottom: 1px solid #0d095e;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
-  }
-  
-  .url .submit-btn {
-    position: absolute;
-    border-radius: 30px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 12px 25px;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    right: -10px;
-    bottom: -20px;
-    cursor: pointer;
-    transition: all .25s ease;
-    box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
-  }
-  
-  .url .submit-btn:hover {
-    background-color: #32a8a2;
-    box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
-    color: #ffffff; 
-    transform: translateY(-2px);
+  position: relative;
+  height: 250px;
+  width: 400px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
 }
 
-.clear-btn {
+.url:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  /* border-bottom: 10px solid #1a044e; */
+}
+
+.url p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 28px;
+  color: black;
+}
+
+.url input {
+  position: relative;
+  bottom: 30px;
+  margin-top:  20px;
+  margin-bottom: 20px;
+  border: none;
+  top: 0.5px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 82%;
+  background: transparent;
+  transition: all .25s ease;
+}
+
+.url input:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+}
+
+.url .submit-btn {
   position: absolute;
   border-radius: 30px;
   border-bottom-right-radius: 0;
@@ -203,78 +177,104 @@ border: 1px white;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 5px;
-  right: -10px; /* Adjust the position to the left */
-  bottom: -63px; /* Adjust the position below the submit button */
+  right: -10px;
+  bottom: -20px;
   cursor: pointer;
   transition: all .25s ease;
   box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
 }
 
-.clear-btn:hover {
+.url .submit-btn:hover {
   background-color: #32a8a2;
   box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
   color: #ffffff; 
   transform: translateY(-2px);
 }
+
+.clear-btn {
+position: absolute;
+border-radius: 30px;
+border-bottom-right-radius: 0;
+border-top-right-radius: 0;
+background-color: #ffffff;
+color: #000000;
+padding: 12px 25px;
+display: inline-block;
+font-size: 12px;
+font-weight: bold;
+letter-spacing: 5px;
+right: -10px; /* Adjust the position to the left */
+bottom: -63px; /* Adjust the position below the submit button */
+cursor: pointer;
+transition: all .25s ease;
+box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+}
+
+.clear-btn:hover {
+background-color: #32a8a2;
+box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+color: #ffffff; 
+transform: translateY(-2px);
+}
 .clear-btn:active{
-  transform: translateY(10px); /* Move button down when clicked */
+transform: translateY(10px); /* Move button down when clicked */
 }
 .submit-btn:active{
-  transform: translateY(10px);
+transform: translateY(10px);
 }
 
 .clear-btn {
-  right: -10px; /* Adjust the position to the left */
-  bottom: -63px; /* Adjust the position below the submit button */
+right: -10px; /* Adjust the position to the left */
+bottom: -63px; /* Adjust the position below the submit button */
 }
 
 .submit-btn {
-  right: -170px; /* Adjust the position to the left */
-  bottom: -20px; /* Adjust the position below the input field */
+right: -170px; /* Adjust the position to the left */
+bottom: -20px; /* Adjust the position below the input field */
 }
 
 #requiredMessage
 {
-  color:#747474;
-  font-size: small;
+color:#747474;
+font-size: small;
 }
 
 select.URL-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 8px 38px 8px 8px;
-  border: 1px solid #d4d4d4;
-  border-radius: 4px;
-  background: transparent url('default-image.jpg') no-repeat right center/20px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+padding: 8px 38px 8px 8px;
+border: 1px solid #d4d4d4;
+border-radius: 4px;
+background: transparent url('default-image.jpg') no-repeat right center/20px;
 }
 
 /* Override default dropdown arrow */
 select.URL-input::-ms-expand {
-  display: none;
+display: none;
 }
 
 /* Styling the options */
 select.URL-input option {
-  padding-left: 25px;
-  background-repeat: no-repeat;
-  background-size: 20px;
+padding-left: 25px;
+background-repeat: no-repeat;
+background-size: 20px;
 }
 
 /* Add specific background images for options */
 select.URL-input option[value="option1"] {
-  background-image: url('./assets/images/facebook-logo.png');
+background-image: url('./assets/images/facebook-logo.png');
 }
 
 select.URL-input option[value="option2"] {
-  background-image: url('./assets/images/instagram-logo.png');
+background-image: url('./assets/images/instagram-logo.png');
 }
 
 select.URL-input option[value="option3"] {
-  background-image: url('./assets/images/twitter-logo.png');
+background-image: url('./assets/images/twitter-logo.png');
 }
 
 
 form{
-  padding-left: 38%;
+padding-left: 38%;
 }
