@@ -18,7 +18,7 @@
                     <p>HEHE</p>
                     <div class="radio-inputs">
                         <label>
-                            <input class="radio-input" type="radio" name="social" onclick="clearInput()" value="facebook">
+                            <input class="radio-input" type="radio" name="social" onclick="clearInput()" value="facebook" checked>
                             <span class="radio-tile">
                                 <span class="radio-tile">
                                     <span class="radio-icon">
@@ -55,35 +55,15 @@
                 </div>
                     <input id="urlInput" placeholder="Enter URL" class="URL-input" name="urlInput" type="text">
                     <p id="requiredMessage" style="display: none;">URL Is Required</p>
-                    <button onclick="copyText()" class="copy-btn" style="display: none;">Copy</button>
-                    <div class="submit-btn" onclick="handleSubmit()">SUBMIT</div>
+                    <div class="submit-btn" onclick="handleSubmit(), myFunction()">SUBMIT</div>
                     <div class="clear-btn" onclick="clearInput()">CLEAR</div>
+                    
                 </div>
             </form>
-            
         </div>
-    </section>
+    
 
     <script src="index.js">
-        // for radio button
-        // Function to select the radio button based on stored value
-        // function selectRadio(selected) {
-        //     localStorage.setItem('selectedRadio', selected);
-        // }
-
-        // // Function to load the selected radio button from localStorage
-        // window.onload = function() {
-        //     var selectedRadio = localStorage.getItem('selectedRadio');
-        //     if (selectedRadio) {
-        //         var radios = document.querySelectorAll('.radio-input');
-        //         radios.forEach(function(radio) {
-        //             if (radio.value === selectedRadio) {
-        //                 radio.checked = true;
-        //             }
-        //         });
-        //     }
-        // }
-        //  for text input validation
         function copyText() {
             var input = document.getElementById("urlInput");
             input.select();
@@ -94,19 +74,46 @@
                 copyBtn.innerText = "Copy";
             }, 2000);
         }
-
-
-        document.querySelector('.submit-btn').addEventListener('click', function() {
+    
+    
+        function handleSubmit() {
             var input = document.getElementById("urlInput").value;
             var copyBtn = document.querySelector('.copy-btn');
+            var requiredMessage = document.getElementById("requiredMessage");
             if (input.trim() === '') {
-                document.getElementById("requiredMessage").style.display = "block";
+                requiredMessage.style.display = "block";
                 copyBtn.style.display = "none";
             } else {
-                document.getElementById("requiredMessage").style.display = "none";
+                requiredMessage.style.display = "none";
                 copyBtn.style.display = "inline-block";
             }
-        });
+        }
     </script>
+    </section>
+    <section id="cardSection">
+        <div class="card">
+            <div class="header">
+              <span class="icon">
+                <img  src="assets/images/meltwater-small.png" alt="logo" />
+                <p class="alert">Insight Information</p>
+              </span>
+            </div>
+          
+            <p class="message">
+                <div id="resultMessage"></div>
+            </p>
+          
+            <div class="actions">
+              <a class="copy" href="" onclick="copyText()">
+                Copy
+              </a>
+          
+              <a class="mark-as-read" href="">
+                Mark as Read
+              </a>
+            </div>
+          </div>
+    </section>
+    
 </body>
 </html>
