@@ -6,11 +6,102 @@
     <title>truncdino</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<<<<<<< Updated upstream
+=======
+<script>
+    function getValue() {
+         // Get the input element by its ID 
+            let inputField = document.getElementById("myInput"); 
+          
+            // Get the value of the input field 
+            let value = inputField.value; 
+          
+            // Display the value in an alert 
+            console.log("Input value: " + value); 
+
+            // Prompt the user to enter a URL
+const url = value;
+
+// Check if the user entered a URL
+if (url) {
+    const parts = url.split("/");
+    const fourthPart = parts[3];
+    // Check if the URL has at least 4 segments
+    
+    
+    if (parts.length >= 4 && fourthPart != "watch" && fourthPart != "reel") {
+        // Slice the URL at the 4th "/"
+        const slicedUrl = parts.slice(0, 4).join("/");
+        const baseurl = new URL(slicedUrl).origin;
+        console.log(slicedUrl);
+        alert("fun1:"+slicedUrl)
+        
+    //    FourParts(parts);
+        // Check if the sliced URL is from Facebook
+        
+        // if ("https://www.facebook.com" === baseurl) {
+        //     console.log("Facebook");
+        // }
+        
+        // Output the sliced URL
+    }else if(parts.length >= 4 && fourthPart == "watch" ){
+        // FiveParts(parts)
+        const slicedUrl = parts.slice(0, 5).join("/");
+        const baseurl = new URL(slicedUrl).origin;
+        console.log(slicedUrl);
+        alert("fun2 :" +slicedUrl);
+    
+       
+     }else if(parts.length >= 4 && fourthPart == "reel" ){
+
+        alert("Invalid input reels");
+        // FiveParts1(parts)
+    //     const slicedUrl = parts.slice(0, 5).join("/");
+    // const baseurl = new URL(slicedUrl).origin;
+    // console.log(slicedUrl);
+    // alert("fun3:"+slicedUrl);
+
+    }
+    
+    else {
+        console.log("URL does not contain enough segments.");
+    }
+} else {
+    console.log("Invalid URL.");
+}
+
+// function FourParts(parts) {
+//     const slicedUrl = parts.slice(0, 4).join("/");
+//     const baseurl = new URL(slicedUrl).origin;
+//     console.log(slicedUrl);
+//     alert(slicedUrl)
+// }
+
+// function FiveParts(parts) {
+//     const slicedUrl = parts.slice(0, 5).join("/");
+//     const baseurl = new URL(slicedUrl).origin;
+//     console.log(slicedUrl);
+//     alert(slicedUrl);
+// }
+
+// function FiveParts1(parts) {
+//     const slicedUrl = parts.slice(0, 5).join("/");
+//     const baseurl = new URL(slicedUrl).origin;
+//     console.log(slicedUrl);
+//     alert(slicedUrl);
+// }
+    }
+
+  
+    
+</script> 
+>>>>>>> Stashed changes
 </head>
 <body>
     <section id="banner">
         <img src="assets/images/logo.png" class="logo">
         <div class="banner-text">
+<<<<<<< Updated upstream
             <h1>truncdino</h1>
             <p>Let's turn all your invalid URLs to valid</p>
             <form>
@@ -65,5 +156,19 @@
             }
         });
     </script>
+=======
+           <h1>truncdino</h1>
+           <p>Let's turn all your invalid URLs to valid</p>
+        <form > 
+            <div class="url">
+                <p>HEHE</p>
+                <input placeholder="Enter URL" class="URL-input" id="myInput" name="myInput" type="text" >
+                <br>
+                <button class="submit-btn" onclick="getValue()">SUBMIT</button>
+            </div>   
+        </form>
+        </div>
+       </section>
+>>>>>>> Stashed changes
 </body>
 </html>
