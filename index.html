@@ -61,6 +61,34 @@
                 </div>
             </form>
         </div>
+        </section>
+        <section id="cardSection">
+            <div class="card">
+                <div class="header">
+                  <span class="icon">
+                    <img  src="assets/images/meltwater-small.png" alt="logo" />
+                    <p class="alert">Insight Information</p>
+                  </span>
+                </div>
+              
+                <p class="message">
+                    <div id="resultMessage"></div>
+                </p>
+              
+                <div class="actions">
+                  <a class="copy" href="" onclick="copyText()">
+                    Copy
+                  </a>
+              
+                  <a class="cancel" href="">
+                    Cancel
+                  </a>
+                </div>
+              </div>
+        </section>
+        
+      
+          <!-- script -->
     
 
     <script src="index.js">
@@ -74,46 +102,8 @@
                 copyBtn.innerText = "Copy";
             }, 2000);
         }
-    
-    
-        function handleSubmit() {
-            var input = document.getElementById("urlInput").value;
-            var copyBtn = document.querySelector('.copy-btn');
-            var requiredMessage = document.getElementById("requiredMessage");
-            if (input.trim() === '') {
-                requiredMessage.style.display = "block";
-                copyBtn.style.display = "none";
-            } else {
-                requiredMessage.style.display = "none";
-                copyBtn.style.display = "inline-block";
-            }
-        }
     </script>
-    </section>
-    <section id="cardSection">
-        <div class="card">
-            <div class="header">
-              <span class="icon">
-                <img  src="assets/images/meltwater-small.png" alt="logo" />
-                <p class="alert">Insight Information</p>
-              </span>
-            </div>
-          
-            <p class="message">
-                <div id="resultMessage"></div>
-            </p>
-          
-            <div class="actions">
-              <a class="copy" href="" onclick="copyText()">
-                Copy
-              </a>
-          
-              <a class="mark-as-read" href="">
-                Mark as Read
-              </a>
-            </div>
-          </div>
-    </section>
+    
     
 </body>
 </html>

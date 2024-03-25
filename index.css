@@ -430,7 +430,7 @@ radio */
 #cardSection {
   background-color: black;
   padding: 20px; /* Adjust padding as needed */
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -504,7 +504,7 @@ background-color: transparent;
   text-decoration: none;
 }
 
-.mark-as-read, .copy {
+.cancel, .copy {
   display: inline-block;
   border-radius: 0.5rem;
   width: 100%;
@@ -520,13 +520,13 @@ background-color: transparent;
   color: rgba(255, 255, 255, 1);
 }
 
-.mark-as-read {
+.cancel {
   margin-top: 0.5rem;
   background-color: rgba(249, 250, 251, 1);
   color: rgba(107, 114, 128, 1);
   transition: all .15s ease;
 }
 
-.mark-as-read:hover {
+.cancel:hover {
   background-color: rgb(230, 231, 233);
 }
